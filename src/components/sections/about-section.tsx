@@ -7,14 +7,14 @@ export const AboutSection = () => {
     <section className="bg-mint-50 py-24 md:py-32">
       <div className="container">
         <div className="max-w-xl lg:translate-x-24">
-          <h2 className="text-muted-foreground mb-4 text-2xl font-semibold md:text-3xl">
+          <h1 className="text-muted-foreground mb-4 text-4xl font-semibold md:text-5xl">
             About Us
-          </h2>
+          </h1>
 
-          <h1 className="leading-13 max-w-[600px] flex-1 text-balance text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
+          <h2 className="max-w-[600px] flex-1 text-balance text-lg leading-6">
             Juno AI is an AI research and development company. We build
             intelligence that benefits all learners.
-          </h1>
+          </h2>
         </div>
 
         {/* Large Image Below */}
@@ -38,27 +38,18 @@ export const AboutSection = () => {
           </div>
         </div>
 
-        {/* Text Below Image */}
-        <div className="mt-28 max-w-xl lg:mt-10 lg:translate-x-24">
-          <p className="text-lg leading-6">
-            Tasks have changed, are changing, and will continue to change — for
-            the better. Now is the time for productivity to be user-first and
-            internet-first. But in order to do this — it needs a new foundation.
-          </p>
-        </div>
-
         <div className="mt-6 space-y-6 md:mt-8 md:space-y-8 lg:mt-10 lg:space-y-10">
           {/* Dynamic System Section */}
           <h2 className="max-w-xl text-2xl font-semibold leading-8 md:text-3xl lg:translate-x-24">
-            We were always told that to-do apps can&apos;t be dynamic systems.
+            Our vision for AI and learning
           </h2>
           <p className="max-w-xl text-lg lg:translate-x-24">
-            Everyone tried fixing the problem by adding features, integrations,
-            and layers of complexity. We have spent our careers using,
-            designing, and rethinking tools like Trello, Notion, and Asana,
-            encountering this problem firsthand. The existing solutions
-            don&apos;t work. We believe a to-do app needs to be a dynamic
-            system. But we had to start from ground zero.
+            Generative AI can perceive, adapt, and deeply understand the world.
+            For learning—a uniquely human pursuit—this unparalleled capability
+            demands a deliberate, principled approach. Our vision at Juno AI is
+            to responsibly shape this future, ensuring AI accelerates
+            understanding with unwavering safety, pedagogical integrity, and
+            sovereign control for every learner.
           </p>
           <div className="grid gap-6 py-6 md:grid-cols-2 lg:py-10">
             <img
@@ -77,10 +68,9 @@ export const AboutSection = () => {
 
           {/* Timeline Section */}
           <p className="ml-auto max-w-xl text-lg leading-6 lg:-translate-x-24">
-            We started building Streamline in 2019 and launched in 2022. Every
-            single feature has been built from scratch — with no unnecessary
-            complexity or outdated tools. We are purpose-built to redefine
-            productivity for the next hundred years.
+            We started building Juno AI in 2023, driven by a need to teach
+            world-class computing at scale. We even won a few awards for it.
+            Now, we want to share everything we&apos;ve learned.
           </p>
 
           {/* Team Section */}
@@ -89,14 +79,12 @@ export const AboutSection = () => {
           </h2>
           <div className="ml-auto max-w-xl text-lg leading-6 lg:-translate-x-24">
             <p>
-              We are 100% founder and team-owned, sustainable, and we keep our
-              team small. Over time, we&apos;ll make this page more polished,
-              but right now we&apos;re focused on delivering for our users. If
-              you&apos;d
-              <br />
-              like to collaborate, check out our open roles:
+              We are a team of leading academics in ML in Sydney, Australia.
+              Over time, we&apos;ll make this page more polished, but right now
+              we&apos;re focused on delivering for our users. If you&apos;d like
+              to work with us, our doors are always open.
             </p>
-            <Button
+            {/* <Button
               variant="outline"
               size="lg"
               className="border-foreground/20 mt-6 rounded-sm border md:mt-8 lg:mt-10"
@@ -107,7 +95,7 @@ export const AboutSection = () => {
                   <ArrowRight className="stroke-3 size-4" />
                 </span>
               </a>
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

@@ -45,7 +45,7 @@ export const SITE_METADATA = {
     siteName: "Juno AI",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Juno AI",
@@ -56,7 +56,7 @@ export const SITE_METADATA = {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/og-image.jpg"],
-    creator: "@junoai",
+    images: ["/og-image.png"],
+    creator: "@jakerenzella",
   },
 };

@@ -49,7 +49,7 @@ const features = [
 ];
 
 const SLIDES = [
-  { image: "/images/homepage/hero.jpg", label: "Juno AI Team" },
+  { image: "/images/homepage/hero.webp", label: "Juno AI Team" },
   //   { image: "/images/homepage/hero2.webp", label: "Issues" },
   //   { image: "/images/homepage/hero3.webp", label: "Add Issues" },
 ];
@@ -113,7 +113,7 @@ export const Hero = () => {
               <Button aria-label="Get in touch">Get in touch</Button>
             </a>
 
-            <a href="#Streamline-news">
+            <a href="#juno-news">
               <Button
                 aria-label="Juno AI raises $500k from Australian Economic Accelerator"
                 variant="outline"
@@ -151,7 +151,7 @@ export const Hero = () => {
                   <div className="relative size-full min-h-[30rem] overflow-hidden rounded-t-xl">
                     <img
                       src={slide.image}
-                      alt={`Streamline product interface showing ${slide.label}`}
+                      alt={`Juno AI team images ${slide.label}`}
                       className="size-full object-cover object-left-top"
                     />
                   </div>

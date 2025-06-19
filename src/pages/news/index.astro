@@ -1,0 +1,14 @@
+---
+import DefaultLayout from "@/layouts/DefaultLayout.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
+import { getCollection } from "astro:content";
+import { NewsPosts } from "@/components/sections/news-posts";
+
+const posts = (await getCollection("news")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+---
+
+<DefaultLayout title={SITE_TITLE} description={SITE_DESCRIPTION}>
+  <NewsPosts posts={posts} client:only="react" />
+</DefaultLayout>

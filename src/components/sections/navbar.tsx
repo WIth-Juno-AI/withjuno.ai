@@ -70,7 +70,7 @@ export const Navbar = ({ currentPage }: { currentPage: string }) => {
     { label: "About us", href: "/about" },
     // { label: "Pricing", href: "/pricing" },
     // { label: "FAQ", href: "/faq" },
-    // { label: "Blog", href: "/blog" },
+    { label: "News", href: "/news" },
     { label: "Contact", href: "/contact" },
   ];
 

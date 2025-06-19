@@ -1,13 +1,9 @@
-# Streamline Astro Template
-
-Streamline Astro Template is a premium template built by https://www.shadcnblocks.com
-
-- [Demo](https://streamline-astro-template.vercel.app/)
+# withjuno.ai
 - [Documentation](https://docs.shadcnblocks.com/templates/getting-started)
 
 ## Screenshot
 
-![Streamline Astro Template screenshot](./public/og-image.jpg)
+![Juno AI screenshot](./public/og-image.png)
 
 ## Getting Started
 
@@ -27,10 +23,3 @@ Open [http://localhost:4321](http://localhost:4321) with your browser to see the
 - Tailwind 4
 - shadcn/ui
 
-## Deploy
-
-You can deploy this template to your preferred hosting platform that supports Astro applications. Some recommended options include:
-
-- [Netlify](https://netlify.com)
-- [Vercel](https://vercel.com)
-- [Cloudflare Pages](https://pages.cloudflare.com)

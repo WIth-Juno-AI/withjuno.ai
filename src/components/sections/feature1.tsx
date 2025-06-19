@@ -1,21 +1,30 @@
-import { Bug, Bell, Sparkles, User } from "lucide-react";
+import {
+  Bug,
+  Bell,
+  Sparkles,
+  User,
+  Pyramid,
+  AlignCenter,
+  ArrowBigLeftDash,
+  ArrowBigRightDash,
+} from "lucide-react";
 
 export const Feature1 = () => {
   const ITEMS = [
     {
       value: "559,615",
-      label: "Uses",
+      label: "Uses of Juno AI",
       icon: User,
     },
     {
-      value: "121%",
-      label: "More notifications",
-      icon: Bell,
+      value: "~50%",
+      label: "Increase in educational alignment* ",
+      icon: ArrowBigRightDash,
     },
     {
-      value: "2x",
-      label: "More chaotic",
-      icon: Sparkles,
+      value: "8",
+      label: "Pedagogical principles",
+      icon: Pyramid,
     },
   ];
 
@@ -27,9 +36,9 @@ export const Feature1 = () => {
             Tailor made for learning
           </h2>
           <p className="text-muted-foreground flex-1 text-lg font-medium md:max-w-md md:self-end">
-            Juno AI integrates into different tools and platforms. From
-            foundational learning to advanced training, our platform elevates
-            understanding everywhere.
+            It is early days, but Juno AI already integrates into different
+            tools and platforms. From foundational learning to advanced
+            training, Juno AI helps students learn.
           </p>
         </div>
 
@@ -55,7 +64,7 @@ export const Feature1 = () => {
         </div>
 
         <div className="text-muted-foreground mt-6 text-end text-sm">
-          *average increase in comparison to Jira
+          *compared to prompt-engineered models
         </div>
       </div>
     </section>

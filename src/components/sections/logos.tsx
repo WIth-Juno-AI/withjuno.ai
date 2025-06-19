@@ -2,24 +2,24 @@ const ITEMS = [
   {
     name: "DCC",
     src: "/images/logos/dcc.svg",
-    width: 200,
-    height: 26,
+    width: 250,
+    height: 100,
     href: "https://dcc.cse.unsw.edu.au",
   },
   {
     name: "DCC Sidekick",
     src: "/images/logos/dcc-sidekick.svg",
-    width: 200,
-    height: 26,
+    width: 400,
+    height: 150,
     href: "https://dcc.cse.unsw.edu.au",
   },
-  //   {
-  //     name: "UNSW",
-  //     src: "/images/logos/unsw.png",
-  //     width: 50,
-  //     height: 26,
-  //     href: "https://unsw.edu.au",
-  //   },
+  {
+    name: "AEA",
+    src: "/images/logos/aea.png",
+    width: 400,
+    height: 150,
+    href: "https://https://www.aea.gov.au/",
+  },
 ];
 
 export default function Logos() {
