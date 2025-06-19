@@ -200,7 +200,7 @@ export const Navbar = ({ currentPage }: { currentPage: string }) => {
           bgColor,
         )}
       >
-        <div className="mt-8 space-y-2">
+        {/* <div className="mt-8 space-y-2">
           <a
             href="/signup"
             className="block"
@@ -219,7 +219,7 @@ export const Navbar = ({ currentPage }: { currentPage: string }) => {
               Login
             </Button>
           </a>
-        </div>
+        </div> */}
         <nav className="mt-3 flex flex-1 flex-col gap-6">
           {ITEMS.map((link: Link) =>
             link.dropdownItems ? (
