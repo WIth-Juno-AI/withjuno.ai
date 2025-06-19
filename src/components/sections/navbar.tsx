@@ -33,32 +33,32 @@ export const Navbar = ({ currentPage }: { currentPage: string }) => {
   }, [isMenuOpen]);
 
   const ITEMS = [
-    {
-      label: "Product",
-      href: "#product",
-      dropdownItems: [
-        {
-          title: "Feature1",
-          href: "/#feature1",
-          description:
-            "Streamline is built on the habits that make the best product teams successful",
-        },
-        {
-          title: "Feature2",
-          href: "/#feature2",
-          description: "Streamline your resource allocation and execution",
-        },
-        {
-          title: "Feature3",
-          href: "/#feature3",
-          description: "Streamline your feature development",
-        },
-      ],
-    },
-    { label: "About us", href: "/about" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "FAQ", href: "/faq" },
-    { label: "Blog", href: "/blog" },
+    // {
+    //   label: "Product",
+    //   href: "#product",
+    //   dropdownItems: [
+    //     {
+    //       title: "Feature1",
+    //       href: "/#feature1",
+    //       description:
+    //         "Streamline is built on the habits that make the best product teams successful",
+    //     },
+    //     {
+    //       title: "Feature2",
+    //       href: "/#feature2",
+    //       description: "Streamline your resource allocation and execution",
+    //     },
+    //     {
+    //       title: "Feature3",
+    //       href: "/#feature3",
+    //       description: "Streamline your feature development",
+    //     },
+    //   ],
+    // },
+    // { label: "About us", href: "/about" },
+    // { label: "Pricing", href: "/pricing" },
+    // { label: "FAQ", href: "/faq" },
+    // { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -87,66 +87,75 @@ export const Navbar = ({ currentPage }: { currentPage: string }) => {
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden items-center gap-8 lg:flex">
             <NavigationMenuList>
-              {ITEMS.map((link) =>
-                link.dropdownItems ? (
-                  <NavigationMenuItem key={link.label}>
-                    <NavigationMenuTrigger className="text-primary bg-transparent font-normal lg:text-base">
-                      {link.label}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent>
-                      <ul className="w-[400px] p-4">
-                        {link.dropdownItems.map((item) => (
-                          <li key={item.title}>
-                            <NavigationMenuLink asChild>
-                              <a
-                                href={item.href}
-                                className="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground outline-hidden flex select-none items-center rounded-md p-3 leading-none no-underline transition-colors"
-                              >
-                                <div className="space-y-1.5">
-                                  <div className="text-sm font-medium leading-none">
-                                    {item.title}
+              {ITEMS.map(
+                (link: {
+                  label: string;
+                  href: string;
+                  dropdownItems?: {
+                    title: string;
+                    href: string;
+                    description: string;
+                  }[];
+                }) =>
+                  link.dropdownItems ? (
+                    <NavigationMenuItem key={link.label}>
+                      <NavigationMenuTrigger className="text-primary bg-transparent font-normal lg:text-base">
+                        {link.label}
+                      </NavigationMenuTrigger>
+                      <NavigationMenuContent>
+                        <ul className="w-[400px] p-4">
+                          {link.dropdownItems.map((item) => (
+                            <li key={item.title}>
+                              <NavigationMenuLink asChild>
+                                <a
+                                  href={item.href}
+                                  className="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground outline-hidden flex select-none items-center rounded-md p-3 leading-none no-underline transition-colors"
+                                >
+                                  <div className="space-y-1.5">
+                                    <div className="text-sm font-medium leading-none">
+                                      {item.title}
+                                    </div>
+                                    <p className="text-muted-foreground line-clamp-2 text-sm leading-tight">
+                                      {item.description}
+                                    </p>
                                   </div>
-                                  <p className="text-muted-foreground line-clamp-2 text-sm leading-tight">
-                                    {item.description}
-                                  </p>
-                                </div>
-                              </a>
-                            </NavigationMenuLink>
-                          </li>
-                        ))}
-                      </ul>
-                    </NavigationMenuContent>
-                  </NavigationMenuItem>
-                ) : (
-                  <NavigationMenuItem key={link.label}>
-                    <a
-                      href={link.href}
-                      className={cn(
-                        "text-primary p-2 lg:text-base",
-                        pathname === link.href && "text-muted-foreground",
-                      )}
-                    >
-                      {link.label}
-                    </a>
-                  </NavigationMenuItem>
-                ),
+                                </a>
+                              </NavigationMenuLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </NavigationMenuContent>
+                    </NavigationMenuItem>
+                  ) : (
+                    <NavigationMenuItem key={link.label}>
+                      <a
+                        href={link.href}
+                        className={cn(
+                          "text-primary p-2 lg:text-base",
+                          pathname === link.href && "text-muted-foreground",
+                        )}
+                      >
+                        {link.label}
+                      </a>
+                    </NavigationMenuItem>
+                  ),
               )}
             </NavigationMenuList>
           </NavigationMenu>
 
           {/* Auth Buttons */}
           <div className="flex items-center gap-2.5">
-            <a href="/signup" className="hidden lg:block">
+            {/* <a href="/signup" className="hidden lg:block">
               <Button variant="ghost" className="text-muted-foreground">
                 Sign up
               </Button>
-            </a>
-            <a
+            </a> */}
+            {/* <a
               href="/login"
               className={`transition-opacity duration-300 ${isMenuOpen ? "max-lg:pointer-events-none max-lg:opacity-0" : "opacity-100"}`}
             >
               <Button variant="outline">Login</Button>
-            </a>
+            </a> */}
             <div
               className={`transition-opacity duration-300 ${isMenuOpen ? "max-lg:pointer-events-none max-lg:opacity-0" : "opacity-100"}`}
             >

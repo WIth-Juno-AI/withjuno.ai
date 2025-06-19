@@ -4,9 +4,13 @@ import Autoplay from "embla-carousel-autoplay";
 import {
   ArrowRight,
   Blend,
+  Blocks,
   ChartNoAxesColumn,
   CircleDot,
   Diamond,
+  FastForward,
+  Pyramid,
+  Shield,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -20,31 +24,34 @@ import { cn } from "@/lib/utils";
 
 const features = [
   {
-    title: "Tailored workflows",
-    description: "Track progress across custom issue flows for your team.",
+    title: "Your data, protected and private",
+    description:
+      "Keep data secure, private, and within your control, off large cloud platforms.",
+    icon: Shield,
+  },
+  {
+    title: "Pedagogically sound",
+    description:
+      "AI is a tool, not a replacement. We embed decades of teaching expertise directly into our models.",
+    icon: Blocks,
+  },
+  {
+    title: "Bespoke",
+    description: "Tailored to different domains and curricula.",
     icon: CircleDot,
   },
   {
-    title: "Milestones",
-    description: "Break projects down into concrete phases.",
-    icon: Diamond,
-  },
-  {
-    title: "Cross-team projects",
-    description: "Collaborate across teams and departments.",
-    icon: Blend,
-  },
-  {
-    title: "Progress insights",
-    description: "Track scope, velocity, and progress over time.",
-    icon: ChartNoAxesColumn,
+    title: "Accelerate learning, safely",
+    description:
+      "Helps students grasp complex concepts faster and more deeply, fostering genuine comprehension and mastery.",
+    icon: FastForward,
   },
 ];
 
 const SLIDES = [
-  { image: "/images/homepage/hero.webp", label: "Kanban" },
-  { image: "/images/homepage/hero2.webp", label: "Issues" },
-  { image: "/images/homepage/hero3.webp", label: "Add Issues" },
+  { image: "/images/homepage/hero.jpg", label: "Juno AI Team" },
+  //   { image: "/images/homepage/hero2.webp", label: "Issues" },
+  //   { image: "/images/homepage/hero3.webp", label: "Add Issues" },
 ];
 
 export const Hero = () => {
@@ -70,12 +77,11 @@ export const Hero = () => {
         <div className="space-y-8 lg:space-y-12">
           <div>
             <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-              Strategy guides product
+              Juno AI
             </h1>
 
             <p className="text-sand-700 font-inter-tight leading-13 mt-3 text-3xl font-medium md:text-4xl lg:text-5xl">
-              Streamline is the fit-for-purpose tool for planning and building
-              modern software products.
+              Artificial Intelligence that benefits all learners
             </p>
           </div>
 
@@ -103,15 +109,15 @@ export const Hero = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <Button aria-label="Get started">Get started</Button>
+            <Button aria-label="Get in touch">Get in touch</Button>
             <a href="#Streamline-news">
               <Button
-                aria-label="Streamline raises $12M from Roba Ventures"
+                aria-label="Juno AI raises $500k from Australian Economic Accelerator"
                 variant="outline"
                 className="max-sm:hidden"
               >
                 <span className="flex items-center gap-2 whitespace-pre-wrap text-start">
-                  Streamline raises $12M from Roba Ventures{" "}
+                  Juno AI raises $500k from Australian Economic Accelerator{" "}
                   <ArrowRight className="stroke-3 size-4" />
                 </span>
               </Button>
@@ -178,7 +184,9 @@ const SlideIndicator = ({
   return (
     <div className={cn("flex flex-col items-center font-medium", className)}>
       <div className="">
-        <span className="text-sand-700">{currentSlide + 1} of 3 — </span>
+        <span className="text-sand-700">
+          {currentSlide + 1} of {SLIDES.length} —{" "}
+        </span>
         <span className="text-primary">{slides[currentSlide].label}</span>
       </div>
       <div className="flex gap-2">
