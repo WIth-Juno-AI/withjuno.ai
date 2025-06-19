@@ -47,16 +47,16 @@ export const Footer = () => {
       <div className="bg-primary">
         <div className="border-sand-600 mx-auto flex max-w-[95vw] flex-col items-center border-b py-10 text-center md:py-14 lg:py-20">
           <h2 className="max-w-[800px] text-balance text-5xl font-semibold leading-none tracking-tight lg:text-6xl">
-            Streamline starts now.{" "}
-            <span className="text-sand-600">Your future won&apos;t wait.</span>
+            The future of learning starts now.{" "}
+            <span className="text-sand-600">Work with Juno AI.</span>
           </h2>
           <Button asChild variant="secondary" size="lg" className="mt-9">
-            <a href="/get-started">Get started with 7 days free</a>
+            <a href="/contact">Hiring founding engineers, product managers</a>
           </Button>
         </div>
 
         {/* Navigation Section */}
-        <nav className="border-sand-600/50 mx-auto max-w-[95vw] border-b py-6">
+        {/* <nav className="border-sand-600/50 mx-auto max-w-[95vw] border-b py-6">
           <div className="container flex flex-wrap gap-x-32 gap-y-20 md:justify-end md:gap-y-24 lg:gap-y-32">
             {navigation.map((section) => (
               <div key={section.title}>
@@ -76,23 +76,24 @@ export const Footer = () => {
               </div>
             ))}
           </div>
-        </nav>
+        </nav> */}
 
         {/* Bottom Section */}
         <div className="container py-8">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="font-medium">
-              © {new Date().getFullYear()} Streamline -{" "}
+              © {new Date().getFullYear()} Juno Learning -{" "}
               <a
-                href="https://shadcnblocks.com"
+                href="https://withjuno.ai"
                 className="underline transition-opacity hover:opacity-80"
                 target="_blank"
               >
-                Shadcnblocks.com
+                withjuno.ai
               </a>
             </p>
             <div className="flex items-center gap-6">
-              {socialLinks.map((link) => (
+              {/* SOCIAL BLOCK DISABLED */}
+              {/* {socialLinks.map((link) => (
                 <a
                   aria-label={link.href}
                   key={link.href}
@@ -101,7 +102,7 @@ export const Footer = () => {
                 >
                   <link.icon size={20} />
                 </a>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>

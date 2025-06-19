@@ -1,14 +1,14 @@
 // Place any global data in this file.
 // You can import this data from anywhere in your site by using the `import` keyword.
 
-export const SITE_TITLE = "Streamline - Modern Astro Template";
+export const SITE_TITLE = "Juno AI";
 export const SITE_DESCRIPTION =
-  "A modern, fully featured Astro template built with Shadcn/UI, TailwindCSS and TypeScript, perfect for your next web application.";
+  "Artificial Intelligence that benefits all learners, with Juno.";
 
 export const SITE_METADATA = {
   title: {
     default: SITE_TITLE,
-    template: "%s | Streamline",
+    template: "%s | Juno AI",
   },
   description: SITE_DESCRIPTION,
   keywords: [
@@ -21,9 +21,9 @@ export const SITE_METADATA = {
     "Shadcn/UI",
     "Web Development",
   ],
-  authors: [{ name: "streamline Team" }],
-  creator: "streamline Team",
-  publisher: "streamline",
+  authors: [{ name: "Juno AI Team" }],
+  creator: "Juno Team",
+  publisher: "Juno Learning",
   robots: {
     index: true,
     follow: true,
@@ -42,13 +42,13 @@ export const SITE_METADATA = {
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    siteName: "streamline",
+    siteName: "Juno AI",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "streamline - Modern Astro Template",
+        alt: "Juno AI",
       },
     ],
   },
@@ -57,6 +57,6 @@ export const SITE_METADATA = {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     images: ["/og-image.jpg"],
-    creator: "@streamline",
+    creator: "@junoai",
   },
 };

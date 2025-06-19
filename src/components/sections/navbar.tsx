@@ -14,6 +14,18 @@ import {
 import { cn } from "@/lib/utils";
 import { ThemeToggle } from "../elements/theme-toggle";
 
+interface DropDownItem extends Object {
+  title: string;
+  href: string;
+  description: string;
+}
+
+interface Link {
+  label: string;
+  href: string;
+  dropdownItems?: DropDownItem[];
+}
+
 export const Navbar = ({ currentPage }: { currentPage: string }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -55,7 +67,7 @@ export const Navbar = ({ currentPage }: { currentPage: string }) => {
     //     },
     //   ],
     // },
-    // { label: "About us", href: "/about" },
+    { label: "About us", href: "/about" },
     // { label: "Pricing", href: "/pricing" },
     // { label: "FAQ", href: "/faq" },
     // { label: "Blog", href: "/blog" },
@@ -87,58 +99,49 @@ export const Navbar = ({ currentPage }: { currentPage: string }) => {
           {/* Desktop Navigation */}
           <NavigationMenu className="hidden items-center gap-8 lg:flex">
             <NavigationMenuList>
-              {ITEMS.map(
-                (link: {
-                  label: string;
-                  href: string;
-                  dropdownItems?: {
-                    title: string;
-                    href: string;
-                    description: string;
-                  }[];
-                }) =>
-                  link.dropdownItems ? (
-                    <NavigationMenuItem key={link.label}>
-                      <NavigationMenuTrigger className="text-primary bg-transparent font-normal lg:text-base">
-                        {link.label}
-                      </NavigationMenuTrigger>
-                      <NavigationMenuContent>
-                        <ul className="w-[400px] p-4">
-                          {link.dropdownItems.map((item) => (
-                            <li key={item.title}>
-                              <NavigationMenuLink asChild>
-                                <a
-                                  href={item.href}
-                                  className="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground outline-hidden flex select-none items-center rounded-md p-3 leading-none no-underline transition-colors"
-                                >
-                                  <div className="space-y-1.5">
-                                    <div className="text-sm font-medium leading-none">
-                                      {item.title}
-                                    </div>
-                                    <p className="text-muted-foreground line-clamp-2 text-sm leading-tight">
-                                      {item.description}
-                                    </p>
+              {ITEMS.map((link: Link) =>
+                link.dropdownItems ? (
+                  <NavigationMenuItem key={link.label}>
+                    <NavigationMenuTrigger className="text-primary bg-transparent font-normal lg:text-base">
+                      {link.label}
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="w-[400px] p-4">
+                        {link.dropdownItems.map((item: DropDownItem) => (
+                          <li key={item.title}>
+                            <NavigationMenuLink asChild>
+                              <a
+                                href={item.href}
+                                className="hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground outline-hidden flex select-none items-center rounded-md p-3 leading-none no-underline transition-colors"
+                              >
+                                <div className="space-y-1.5">
+                                  <div className="text-sm font-medium leading-none">
+                                    {item.title}
                                   </div>
-                                </a>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
-                        </ul>
-                      </NavigationMenuContent>
-                    </NavigationMenuItem>
-                  ) : (
-                    <NavigationMenuItem key={link.label}>
-                      <a
-                        href={link.href}
-                        className={cn(
-                          "text-primary p-2 lg:text-base",
-                          pathname === link.href && "text-muted-foreground",
-                        )}
-                      >
-                        {link.label}
-                      </a>
-                    </NavigationMenuItem>
-                  ),
+                                  <p className="text-muted-foreground line-clamp-2 text-sm leading-tight">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              </a>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
+                ) : (
+                  <NavigationMenuItem key={link.label}>
+                    <a
+                      href={link.href}
+                      className={cn(
+                        "text-primary p-2 lg:text-base",
+                        pathname === link.href && "text-muted-foreground",
+                      )}
+                    >
+                      {link.label}
+                    </a>
+                  </NavigationMenuItem>
+                ),
               )}
             </NavigationMenuList>
           </NavigationMenu>
@@ -218,7 +221,7 @@ export const Navbar = ({ currentPage }: { currentPage: string }) => {
           </a>
         </div>
         <nav className="mt-3 flex flex-1 flex-col gap-6">
-          {ITEMS.map((link) =>
+          {ITEMS.map((link: Link) =>
             link.dropdownItems ? (
               <div key={link.label} className="">
                 <button
@@ -248,7 +251,7 @@ export const Navbar = ({ currentPage }: { currentPage: string }) => {
                       : "max-h-0 opacity-0",
                   )}
                 >
-                  {link.dropdownItems.map((item) => (
+                  {link.dropdownItems.map((item: DropDownItem) => (
                     <a
                       key={item.title}
                       href={item.href}

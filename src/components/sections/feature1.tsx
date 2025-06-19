@@ -24,12 +24,12 @@ export const Feature1 = () => {
       <div className="container">
         <div className="flex flex-col gap-3 md:flex-row">
           <h2 className="flex-1 text-balance text-3xl font-semibold leading-tight tracking-tight md:text-4xl lg:text-5xl">
-            AI tailor made for learners
+            Tailor made for learning
           </h2>
           <p className="text-muted-foreground flex-1 text-lg font-medium md:max-w-md md:self-end">
-            Juno AI is meticulously designed to integrate into different tools
-            and platforms. From foundational learning to advanced training, our
-            platform elevates understanding everywhere.
+            Juno AI integrates into different tools and platforms. From
+            foundational learning to advanced training, our platform elevates
+            understanding everywhere.
           </p>
         </div>
 

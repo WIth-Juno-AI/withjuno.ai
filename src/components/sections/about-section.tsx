@@ -12,8 +12,8 @@ export const AboutSection = () => {
           </h2>
 
           <h1 className="leading-13 max-w-[600px] flex-1 text-balance text-3xl font-semibold tracking-tight md:text-4xl lg:text-5xl">
-            We&apos;re Streamline. We&apos;re a different kind of planning tool
-            that enables builders to create the future now.
+            Juno AI is an AI research and development company. We build
+            intelligence that benefits all learners.
           </h1>
         </div>
 

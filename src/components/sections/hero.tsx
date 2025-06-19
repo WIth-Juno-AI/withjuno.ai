@@ -81,7 +81,7 @@ export const Hero = () => {
             </h1>
 
             <p className="text-sand-700 font-inter-tight leading-13 mt-3 text-3xl font-medium md:text-4xl lg:text-5xl">
-              Artificial Intelligence that benefits all learners
+              We're building Artificial Intelligence that benefits all learners
             </p>
           </div>
 
@@ -109,7 +109,10 @@ export const Hero = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-4">
-            <Button aria-label="Get in touch">Get in touch</Button>
+            <a href="/contact" className="">
+              <Button aria-label="Get in touch">Get in touch</Button>
+            </a>
+
             <a href="#Streamline-news">
               <Button
                 aria-label="Juno AI raises $500k from Australian Economic Accelerator"

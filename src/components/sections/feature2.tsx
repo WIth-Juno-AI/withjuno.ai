@@ -1,3 +1,4 @@
+import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader } from "../ui/card";
 
 import { cn } from "@/lib/utils";
@@ -75,12 +76,17 @@ const ITEMS: ItemType[] = [
 export const Feature2 = () => {
   return (
     <section id="feature2" className="bg-muted py-16 md:py-28 lg:py-32">
-      <div className="container">
-        <h2 className="text-balance text-center text-3xl font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-          Streamline your resource allocation and execution
+      <div className="container flex flex-col items-center gap-4 text-center">
+        <h2 className="text-balance text-center text-2xl font-semibold tracking-tight sm:text-3xl md:text-4xl lg:text-5xl">
+          Build the future of learning with us
         </h2>
+        <span className="text-muted-foreground text-balance text-center">
+          We're hiring founding engineers, product managers, and designers
+        </span>
 
-        <div className="mt-8 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-6 md:grid-rows-5 lg:mt-20">
+        <Button aria-label="Get in touch">Get in touch</Button>
+
+        {/* <div className="mt-8 grid grid-cols-1 gap-4 md:mt-12 md:grid-cols-6 md:grid-rows-5 lg:mt-20">
           {ITEMS.map((item, i) => {
             const gridClasses = {
               0: "md:col-span-3 md:row-span-3",
@@ -90,8 +96,8 @@ export const Feature2 = () => {
               4: "md:col-span-2 md:row-span-2 md:col-start-5 md:row-start-4",
             }[i];
             return <Item key={i} {...item} className={gridClasses} />;
-          })}
-        </div>
+          })} */}
+        {/* </div> */}
       </div>
     </section>
   );

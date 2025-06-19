@@ -8,12 +8,12 @@ import { Textarea } from "../ui/textarea";
 const formFields = [
   {
     label: "Full name",
-    name: "fullName",
+    name: "name",
     placeholder: "First and last name",
     type: "text",
   },
   {
-    label: "Work email address",
+    label: "Email address",
     name: "email",
     placeholder: "me@company.com",
     type: "email",
@@ -25,13 +25,13 @@ const formFields = [
     type: "text",
     optional: true,
   },
-  {
-    label: "Number of employees",
-    name: "employees",
-    placeholder: "Company name",
-    type: "text",
-    optional: true,
-  },
+  //   {
+  //     label: "Number of employees",
+  //     name: "employees",
+  //     placeholder: "Company name",
+  //     type: "text",
+  //     optional: true,
+  //   },
   {
     label: "Your message",
     name: "message",
@@ -54,14 +54,14 @@ export const ContactPage = () => {
         <div className="mt-8 flex max-md:flex-col md:mt-12 md:divide-x lg:mt-20">
           {/* Contact Information */}
           <div className="space-y-10 md:pe-14">
-            <div>
+            {/* <div>
               <h2 className="text-lg font-semibold">Corporate office</h2>
               <p className="text-muted-foreground mt-3 text-lg font-medium tracking-tight">
                 1 Carlsberg Close
                 <br />
                 1260 Hillview, Australia
               </p>
-            </div>
+            </div> */}
 
             <div>
               <h2 className="text-lg font-semibold">Email us</h2>
@@ -69,25 +69,25 @@ export const ContactPage = () => {
                 <div>
                   <p>Careers</p>
                   <a
-                    href="mailto:careers@streamline.com"
+                    href="mailto:careers@withjuno.ai"
                     className="text-muted-foreground mt-3 text-lg font-medium tracking-tight"
                   >
-                    careers@streamline.com
+                    careers@withjuno.ai
                   </a>
                 </div>
                 <div>
                   <p>Press</p>
                   <a
-                    href="mailto:press@streamline.com"
+                    href="mailto:media@withjuno.ai"
                     className="text-muted-foreground mt-3 text-lg font-medium tracking-tight"
                   >
-                    press@streamline.com
+                    media@withjuno.ai
                   </a>
                 </div>
               </div>
             </div>
 
-            <div>
+            {/* <div>
               <h2 className="text-lg font-semibold">Follow us</h2>
               <div className="mt-3 flex gap-6">
                 <a
@@ -109,13 +109,18 @@ export const ContactPage = () => {
                   <Linkedin className="size-6" />
                 </a>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Inquiry Form */}
           <div className="flex-1 md:ps-8">
             <h2 className="text-lg font-semibold">Inquiries</h2>
-            <form className="mt-5 space-y-5">
+            <form method="POST" id="form" className="mt-5 space-y-5">
+              <input
+                type="hidden"
+                name="access_key"
+                value="c73a4616-a99f-4e6d-862f-b7e75547d50e"
+              ></input>
               {formFields.map((field) => (
                 <div key={field.name} className="flex flex-col gap-2">
                   <Label>
@@ -143,10 +148,11 @@ export const ContactPage = () => {
                 </div>
               ))}
 
-              <div className="flex justify-end">
+              <div className="flex flex-col justify-end">
                 <Button type="submit" size="lg">
                   Submit
                 </Button>
+                <div id="result"></div>
               </div>
             </form>
           </div>
